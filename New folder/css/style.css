@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: teal;
+}
+
+.container {
+    display: flex;
+    padding: 15px;
+    min-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+    display: none;
+}
+
+.box-1,
+.box-2,
+.box-3 {
+    border-radius: 50%;
+    padding: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.176);
+    box-shadow: 0 8px 32px 10px rgba(0, 0, 0, 0.2), 0 6px 32px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn__img,
+.box-1,
+.box-2,
+.box-3 {
+    animation-name: scale;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+
+}
+
+.btn__img {
+    animation-delay: 2s;
+}
+
+.box-1 {
+    animation-delay: 2.1s;
+}
+
+.box-2 {
+    animation-delay: 2.2s;
+}
+
+.box-3 {
+    animation-delay: 2.3s;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animate-btn {
+    position: fixed;
+}
+
+.animate-plus {
+    width: 100px;
+    height: 100px;
+    background: #ff7a00;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 44px;
+}
+
+.animate-plus {
+    animation-timing-function: ease-in-out;
+    transition: all 0.4s;
+}
+
+.animate-plus:hover {
+    transform: rotate(180deg);
+}
+
+.animate-plus:hover .plus {
+    transform: scale(1.2);
+    color: aqua;
+}
+
+.animate-span,
+.xmark__span {
+    display: inline-block;
+    width: 80px;
+    color: #ff7a00;
+    height: 80px;
+    background: white;
+    margin: 2px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.xmark__span {
+    width: 100px;
+    height: 100px;
+    color: white;
+    background: #ff7a00;
+    font-size: 44px;
+    transform-origin: center;
+    transition: all .6s;
+}
+
+.animate-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    position: fixed;
+    transition: all 1s ease-in-out;
+    left: 110px;
+}
+
+.xmark__span:hover {
+    transform: rotate(360deg);
+}
+
+.xmark__span:hover .fa-xmark {
+    animation: scale 2s ease-in-out infinite;
+
+}
+
+.animate-btn:hover .bar .animate-span {
+    visibility: visible;
+}
+
+.message {
+    transition-delay: 0.3s;
+}
+
+.message:hover .fa-message {
+    transform: scale(1.5);
+}
+
+.bell {
+    transition-delay: 0.5s;
+}
+
+.bell:hover .fa-bell {
+    transform: scale(1.5);
+}
+
+.phone {
+    transition-delay: 0.7s;
+}
+
+.phone:hover .fa-phone {
+    transform: scale(1.5);
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1) rotate(-360deg);
+
+    }
+
+    50% {
+        transform: scale(0.8) rotate(360deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(-360deg);
+    }
+}
